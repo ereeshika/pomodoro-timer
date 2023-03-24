@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pomodoro Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="timer">
-      <h1 id="timer-display">25:00</h1>
-      <button id="start-button">Start</button>
-      <button id="reset-button">Reset</button>
+    <div class="container">
+      <h1 class="text-center my-5">Pomodoro Timer</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center" id="timer-display">25:00</h5>
+              <div class="text-center">
+                <button class="btn btn-primary mr-2" id="start-button">
+                  Start
+                </button>
+                <button class="btn btn-secondary" id="reset-button">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

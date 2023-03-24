@@ -8,6 +8,7 @@ const LONG_BREAK_PHASE = "Long Break";
 let timerDisplay = document.getElementById("timer-display");
 let startButton = document.getElementById("start-button");
 let resetButton = document.getElementById("reset-button");
+let audio = new Audio("notification.mp3");
 
 let timer;
 let timeLeft = WORK_TIME;
@@ -44,12 +45,17 @@ function updateTimer() {
         timeLeft = SHORT_BREAK_TIME;
         phase = SHORT_BREAK_PHASE;
       }
+      audio.play(); // play notification sound
     } else {
       timeLeft = WORK_TIME;
       phase = WORK_PHASE;
+      audio.play(); // play notification sound
     }
     updateTimerDisplay();
     startButton.disabled = false;
+  } else if (timeLeft === 60) {
+    audio.play(); // play notification sound
+    updateTimerDisplay();
   } else {
     updateTimerDisplay();
   }
